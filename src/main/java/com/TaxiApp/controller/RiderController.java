@@ -29,7 +29,7 @@ import com.TaxiApp.repository.Rider.RiderRepository;
 
 @RestController
 @CrossOrigin
-@RequestMapping(path="/")
+@RequestMapping
 public class RiderController {
 	@Autowired
 	RiderRepository riderRepository;
@@ -41,7 +41,7 @@ public class RiderController {
 
 	@Qualifier("jdbcRiderRepository") // Test JdbcTemplate
 
-	@GetMapping(path = "")
+	@GetMapping(path = "/")
 	String test() {
 
 		return "testing";
