@@ -1,0 +1,9 @@
+com\TaxiApp\repository\BookRepository.class
+com\TaxiApp\TaxiAppApplication.class
+com\TaxiApp\repository\JdbcBookRepository.class
+com\TaxiApp\repository\Rider\JdbcRiderRepository.class
+com\TaxiApp\Book.class
+com\TaxiApp\repository\NamedParameterJdbcBookRepository.class
+com\TaxiApp\repository\Rider\RiderRepository.class
+com\TaxiApp\Rider.class
+com\TaxiApp\controller\RiderController.class
