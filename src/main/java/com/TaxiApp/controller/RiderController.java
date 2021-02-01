@@ -29,7 +29,7 @@ import com.TaxiApp.repository.Rider.RiderRepository;
 
 @RestController
 @CrossOrigin
-@RequestMapping(path="/rider")
+@RequestMapping(path="/")
 public class RiderController {
 	@Autowired
 	RiderRepository riderRepository;
@@ -41,16 +41,21 @@ public class RiderController {
 
 	@Qualifier("jdbcRiderRepository") // Test JdbcTemplate
 
+	@GetMapping(path = "")
+	String test() {
 
+		return "testing";
+	}
+	
 	// add rider
-	@PostMapping(path = "/addrider")
+	@PostMapping(path = "rider/addrider")
 	void createRider(@RequestBody Rider rider) {
 
 		riderRepository.save(rider);
 	}
 
 	// view all riders
-	@GetMapping(path = "/viewallrider")
+	@GetMapping(path = "rider/viewallrider")
 	public List<Rider> getalluser() {
 
 		return riderRepository.findAll();
@@ -58,7 +63,7 @@ public class RiderController {
 	}
 
 	// add rider
-		@PostMapping(path = "/update")
+		@PostMapping(path = "rider/update")
 		public String UpdateRider(Rider rider) {
 			try {
 				//book.setPrice(new BigDecimal("99.99"));
